@@ -21,6 +21,7 @@
 # Each element in the array appears twice except for one element which appears only once.
 
 def single_number(nums: list[int]) -> int:
+    # O(n)
     x=0 
     for i in range(len(nums)):
         x ^= nums[i]
