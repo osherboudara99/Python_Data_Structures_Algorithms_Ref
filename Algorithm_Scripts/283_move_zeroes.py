@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/move-zeroes/description/
 # Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
 # Note that you must do this in-place without making a copy of the array.
@@ -58,3 +59,19 @@ print(move_zeroes([1,2,3,0,4,5,6,0,3,4,0,8]))
 # (slow and fast will stay at same position if no zeroes in array
 # (if zero is encountered slow stays and fast increments so then when we reach next non zero, we swap and zero is closer to end of list)
     
+
+# Approach 1: Two-Pointer Swap
+# - Use two pointers: 'fast' to scan the list, 'slow' to track the position to move non-zero elements.
+# - Every time a non-zero element is found, swap it with the element at 'slow' and increment 'slow'.
+# - This method may perform unnecessary swaps if fast == slow.
+
+# Time Complexity: O(n)
+# Space Complexity: O(1) — in-place
+
+
+# Approach 2: Two-Pointer Swap (with Swap Check Optimization)
+# - Same logic as above, but includes a condition to skip unnecessary swaps (when slow == fast).
+# - This reduces the number of actual writes to memory, which matters in environments with expensive write operations (e.g., flash memory).
+
+# Time Complexity: O(n)
+# Space Complexity: O(1) — in-place

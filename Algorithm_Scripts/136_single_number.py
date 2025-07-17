@@ -40,3 +40,14 @@ print(single_number([7,8,7,8]))
 # Loop through number list
 #   Bitwise XOR x and number at index (if x and i match, result is zero, else result is the addition of numbers in question)
 # Return x
+
+# Approach: Bit Manipulation using XOR
+# - XOR has a unique property: a ^ a = 0 and a ^ 0 = a
+# - When you XOR all numbers together, pairs cancel each other out.
+# - The result is the number that appears only once.
+
+# Time Complexity: O(n)
+# - Single pass through the list.
+
+# Space Complexity: O(1)
+# - No extra space used, just one variable (x).
