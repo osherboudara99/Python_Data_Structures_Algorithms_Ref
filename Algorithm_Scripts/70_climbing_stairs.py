@@ -55,7 +55,7 @@ def climb_stairs(n:int) -> int:
     prev2 = 2 
     current = 0 
 
-    for i in range(3,n):
+    for _ in range(3,n):
         current = prev1 +prev2 
         prev2 = prev1 
         prev1 = current 
