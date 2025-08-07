@@ -34,3 +34,20 @@ def reverse_prefix(word:str, ch:str) -> str:
 print(reverse_prefix(word = "abcdefd", ch = "d"))
 print(reverse_prefix(word = "xyxzxe", ch = "z"))
 print(reverse_prefix(word = "abcd", ch = "z"))
+
+# Approach: Prefix Reversal
+# - Iterate through the string to find the first occurrence of the character `ch`.
+# - Once found:
+#     1. Reverse the substring from index 0 to i (inclusive).
+#     2. Concatenate the reversed prefix with the remaining part of the string (i+1 onward).
+# - If `ch` is not found, return the original string unchanged.
+#
+# Time Complexity: O(n)
+# - Looping to find `ch` is O(n), and slicing/reversal is also O(n).
+#
+# Space Complexity: O(n)
+# - String slicing and concatenation create new strings.
+#
+# Notes:
+# - Efficient for small and medium-sized strings.
+# - If `ch` does not exist in `word`, no extra processing is done beyond the initial loop.
