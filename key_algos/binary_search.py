@@ -1,4 +1,4 @@
-def binary_search(l:list, val :int) -> int:
+def binary_search(l:list[int], val :int) -> int:
     
     low = 0 
     high = len(l)-1
@@ -22,7 +22,7 @@ l = [1,2,3,4,5,6,7,8]
 print(binary_search(l, 8))
 
 
-def binary_search(l:list, low:int, high:int, val:int) -> int:
+def binary_search(l:list[int], low:int, high:int, val:int) -> int:
 
     if low <= high:
 
